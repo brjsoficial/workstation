@@ -18,3 +18,30 @@ Para quem estiver usando o Ubuntu no VirtualBox será necessário corrigir o pro
 sudo apt-get update
 sudo apt-get install virtualbox-guest-utils virtualbox-guest-x11 virtualbox-guest-dkms
 ```
+
+Caso ocorra erro de dependência do virtualbox-guest-x11 digite o seguinte comando abaixo:
+
+```bash
+sudo apt-get remove libcheese-gtk23
+sudo apt-get install xserver-xorg-core
+sudo apt-get install -f virtualbox-guest-utils virtualbox-guest-x11 virtualbox-guest-dkms
+```
+
+Após a instalação reinicie a maquina virtual
+
+# Instalando o Node.js 6 e NPM
+
+Para instalar o Node.js e NPM basta executar o comando abaixo:
+
+```bash
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt-get install -y nodejs
+sudo apt-get install -y build-essential
+```
+
+Para verificar se a instalação foi realizada com sucesso digite
+
+```bash
+node -v
+```
+
