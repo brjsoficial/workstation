@@ -56,6 +56,8 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
 echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
 sudo apt-get update
 sudo apt-get install -y mongodb-org
+service mongod start
+sudo reboot
 ```
 
 Para verificar se a instalação foi realizada com sucesso digite: 
@@ -107,7 +109,7 @@ Para mais informações sobre o Phonegap: http://brjs.com.br/app-em-20min-com-ph
 Para instalar o Phonegap basta executar os comandos abaixo: 
 
 ```bash
-npm install -g phonegap@latest
+sudo npm install -g phonegap@latest
 ```
 
 # Instalando o NW.JS
@@ -115,7 +117,7 @@ npm install -g phonegap@latest
 Para instalar o NW.JS basta executar os comandos abaixo: 
 
 ```bash
-npm i -g nwjs
+sudo npm i -g nwjs
 ```
 
 # Instalando o Git
